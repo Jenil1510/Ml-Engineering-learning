@@ -41,6 +41,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+try:
+    from IPython.display import display
+except ImportError:
+    display = print
+
 # Visual styling
 plt.style.use('seaborn-v0_8-whitegrid' if 'seaborn-v0_8-whitegrid' in plt.style.available else 'default')
 plt.rcParams['font.size'] = 11
